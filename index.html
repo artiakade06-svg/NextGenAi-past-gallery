@@ -4,92 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NextGenAI — Pentathon 2.0</title>
+    <title>Gallery — NextGenAI Pentathon 2.0</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Syne:wght@400;600;800&family=Space+Mono&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-    <!-- NAV -->
     <nav>
         <div class="logo">NEXT<span>GEN</span>AI</div>
-        <ul class="nav-links">
-            <li><a href="#" class="active" onclick="switchPage('home'); return false;">Home</a></li>
-            <li><a href="#" onclick="switchPage('gallery'); return false;">Gallery</a></li>
-            <li><a href="#" onclick="switchPage('events'); return false;">Events</a></li>
-        </ul>
+        <div class="nav-title">Official Posters</div>
     </nav>
 
-    <!-- PAGE 1 — HOME -->
-    <div id="page-home">
-        <section class="hero">
-            <div class="grid-bg"></div>
-            <div class="orb orb1"></div>
-            <div class="orb orb2"></div>
-            <div class="orb orb3"></div>
-            <div class="hero-inner">
-                <div class="badge">Cintel's Next Gen AI Club</div>
-                <h1 class="hero-title">PENTATHON</h1>
-                <div class="hero-ver">2.0</div>
-                <div class="hero-date">March 19 – 21, 2025</div>
-                <p class="hero-desc">
-                    An electrifying multi-event tech fest where the brightest minds compete across five cutting-edge tracks. Organized by Next Gen AI under the Department of CINTEL.
-                </p>
-                <div class="chips">
-                    <div class="chip" onclick="openEvent('appathon')">👻 Appathon 2.0</div>
-                    <div class="chip" onclick="openEvent('webathon')">🌐 Webathon 2.0</div>
-                    <div class="chip" onclick="openEvent('datathon')">💠 Datathon 2.0</div>
-                    <div class="chip" onclick="openEvent('hackstreet')">🔓 Hack Street 3.0</div>
-                    <div class="chip" onclick="openEvent('ideathon')">💡 Ideathon 2.0</div>
-                </div>
-            </div>
-        </section>
-
-        <div class="stats-row">
-            <div class="stat"><span class="num">5</span>
-                <div class="lbl">Events</div>
-            </div>
-            <div class="stat"><span class="num">3</span>
-                <div class="lbl">Days</div>
-            </div>
-            <div class="stat"><span class="num">₹20K</span>
-                <div class="lbl">Prize Pool</div>
-            </div>
-            <div class="stat"><span class="num">1–4</span>
-                <div class="lbl">Team Size</div>
-            </div>
-        </div>
-
-        <div class="about-section">
-            <div class="sec-label">// About Pentathon 2.0</div>
-            <div class="about-grid">
-                <div class="about-text">
-                    <h2>We're back and better than before</h2>
-                    <p>Pentathon 2.0 is the flagship multi-hackathon event by <strong>Next Gen AI</strong>, the premier AI & tech club under the Department of CINTEL. After an electrifying first edition, we returned with bigger challenges, higher prizes,
-                        and more innovation.</p>
-                    <p>Participants battle across five unique tracks — from building apps and websites to crunching datasets, hacking challenges, and pitching bold ideas.</p>
-                    <p>ODs & refreshments provided throughout the event. Open to teams of 1–4 members.</p>
-                </div>
-                <div class="prize-card">
-                    <div class="sec-label" style="margin-bottom:14px">// Prize Structure</div>
-                    <div class="prize-row"><span class="place">🥇 1ST PLACE</span><span class="amt gold">₹10,000</span></div>
-                    <div class="prize-row"><span class="place">🥈 2ND PLACE</span><span class="amt silver">₹6,000</span></div>
-                    <div class="prize-row"><span class="place">🥉 3RD PLACE</span><span class="amt bronze">₹4,000</span></div>
-                    <div class="reg-box">
-                        <div class="sec-label" style="margin-bottom:8px">// Registration Fee</div>
-                        <div><span class="old">₹698</span> <span class="fee">₹529</span></div>
-                        <div class="reg-note">Two Event Limited Offer · Single Event ₹349</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <footer>© 2025 <span>NextGenAI</span> — Cintel's Innovation Club · Pentathon 2.0</footer>
-    </div>
-
-    <!-- PAGE 2 — GALLERY -->
-    <div id="page-gallery" style="display:none">
+    <div id="page-gallery">
         <div class="page-wrap">
             <div class="page-header">
                 <div class="badge">Event Posters</div>
@@ -133,164 +60,6 @@
         <footer>© 2025 <span>NextGenAI</span> — Cintel's Innovation Club · Pentathon 2.0</footer>
     </div>
 
-    <!-- PAGE 3 — EVENTS -->
-    <div id="page-events" style="display:none">
-        <div class="page-wrap">
-            <div class="page-header">
-                <div class="badge">Event Archive</div>
-                <h1>Event Folders</h1>
-                <p>Explore each event · Add notes · Upload photos from the event</p>
-            </div>
-
-            <div class="folders">
-
-                <!-- APPATHON -->
-                <div class="folder" id="folder-appathon">
-                    <div class="folder-head" onclick="toggleFolder('appathon')">
-                        <div class="ficon" style="background:rgba(249,115,22,0.15);border-color:rgba(249,115,22,0.4)">👻</div>
-                        <div class="ftitle">
-                            <h3 style="color:#f97316">Appathon 2.0</h3>
-                            <p>Mobile / Desktop App Building</p>
-                        </div>
-                        <div class="farrow">▾</div>
-                    </div>
-                    <div class="folder-body">
-                        <ul class="notes" id="notes-appathon">
-                            <li><span class="dot"></span>Build an innovative mobile or desktop application within the event timeframe</li>
-                            <li><span class="dot"></span>Teams must present a working prototype with UI/UX demonstration</li>
-                            <li><span class="dot"></span>Judged on creativity, functionality, design, and real-world impact</li>
-                        </ul>
-                        <div class="note-form">
-                            <input type="text" id="input-appathon" placeholder="Add a note...">
-                            <button onclick="addNote('appathon')">+ Add</button>
-                        </div>
-                        <div class="upload-area" onclick="document.getElementById('img-appathon').click()">
-                            <p>📸 Click to upload event photos</p>
-                            <input type="file" id="img-appathon" accept="image/*" multiple onchange="uploadImgs('appathon',this)">
-                        </div>
-                        <div class="img-grid" id="imgs-appathon"></div>
-                    </div>
-                </div>
-
-                <!-- WEBATHON -->
-                <div class="folder" id="folder-webathon">
-                    <div class="folder-head" onclick="toggleFolder('webathon')">
-                        <div class="ficon" style="background:rgba(168,85,247,0.15);border-color:rgba(168,85,247,0.4)">🌐</div>
-                        <div class="ftitle">
-                            <h3 style="color:#e879f9">Webathon 2.0</h3>
-                            <p>Web Development Challenge</p>
-                        </div>
-                        <div class="farrow">▾</div>
-                    </div>
-                    <div class="folder-body">
-                        <ul class="notes" id="notes-webathon">
-                            <li><span class="dot"></span>Design and develop a full-featured website or web application</li>
-                            <li><span class="dot"></span>Focus on responsiveness, performance, and modern tech stack</li>
-                            <li><span class="dot"></span>Bonus points for accessibility and progressive web app features</li>
-                        </ul>
-                        <div class="note-form">
-                            <input type="text" id="input-webathon" placeholder="Add a note...">
-                            <button onclick="addNote('webathon')">+ Add</button>
-                        </div>
-                        <div class="upload-area" onclick="document.getElementById('img-webathon').click()">
-                            <p>📸 Click to upload event photos</p>
-                            <input type="file" id="img-webathon" accept="image/*" multiple onchange="uploadImgs('webathon',this)">
-                        </div>
-                        <div class="img-grid" id="imgs-webathon"></div>
-                    </div>
-                </div>
-
-                <!-- DATATHON -->
-                <div class="folder" id="folder-datathon">
-                    <div class="folder-head" onclick="toggleFolder('datathon')">
-                        <div class="ficon" style="background:rgba(192,132,252,0.15);border-color:rgba(192,132,252,0.4)">💠</div>
-                        <div class="ftitle">
-                            <h3 style="color:#c084fc">Datathon 2.0</h3>
-                            <p>Data Science & ML Competition</p>
-                        </div>
-                        <div class="farrow">▾</div>
-                    </div>
-                    <div class="folder-body">
-                        <ul class="notes" id="notes-datathon">
-                            <li><span class="dot"></span>Analyze real-world datasets to derive actionable insights</li>
-                            <li><span class="dot"></span>Build predictive models using ML/AI techniques</li>
-                            <li><span class="dot"></span>Present findings with compelling data visualizations</li>
-                        </ul>
-                        <div class="note-form">
-                            <input type="text" id="input-datathon" placeholder="Add a note...">
-                            <button onclick="addNote('datathon')">+ Add</button>
-                        </div>
-                        <div class="upload-area" onclick="document.getElementById('img-datathon').click()">
-                            <p>📸 Click to upload event photos</p>
-                            <input type="file" id="img-datathon" accept="image/*" multiple onchange="uploadImgs('datathon',this)">
-                        </div>
-                        <div class="img-grid" id="imgs-datathon"></div>
-                    </div>
-                </div>
-
-                <!-- HACK STREET -->
-                <div class="folder" id="folder-hackstreet">
-                    <div class="folder-head" onclick="toggleFolder('hackstreet')">
-                        <div class="ficon" style="background:rgba(123,47,255,0.2);border-color:rgba(123,47,255,0.5)">🔓</div>
-                        <div class="ftitle">
-                            <h3 style="color:#a855f7">Hack Street 3.0</h3>
-                            <p>48-Hour Hackathon · Mar 20–21</p>
-                        </div>
-                        <div class="farrow">▾</div>
-                    </div>
-                    <div class="folder-body">
-                        <ul class="notes" id="notes-hackstreet">
-                            <li><span class="dot"></span>48-hour intensive hackathon spanning March 20–21, 2025</li>
-                            <li><span class="dot"></span>Build innovative solutions to real-world problems under time pressure</li>
-                            <li><span class="dot"></span>Mentors and industry experts available throughout the event</li>
-                            <li><span class="dot"></span>ODs and refreshments provided for all participants</li>
-                        </ul>
-                        <div class="note-form">
-                            <input type="text" id="input-hackstreet" placeholder="Add a note...">
-                            <button onclick="addNote('hackstreet')">+ Add</button>
-                        </div>
-                        <div class="upload-area" onclick="document.getElementById('img-hackstreet').click()">
-                            <p>📸 Click to upload event photos</p>
-                            <input type="file" id="img-hackstreet" accept="image/*" multiple onchange="uploadImgs('hackstreet',this)">
-                        </div>
-                        <div class="img-grid" id="imgs-hackstreet"></div>
-                    </div>
-                </div>
-
-                <!-- IDEATHON -->
-                <div class="folder" id="folder-ideathon">
-                    <div class="folder-head" onclick="toggleFolder('ideathon')">
-                        <div class="ficon" style="background:rgba(216,180,254,0.1);border-color:rgba(216,180,254,0.4)">💡</div>
-                        <div class="ftitle">
-                            <h3 style="color:#d8b4fe">Ideathon 2.0</h3>
-                            <p>Innovation Pitch Competition</p>
-                        </div>
-                        <div class="farrow">▾</div>
-                    </div>
-                    <div class="folder-body">
-                        <ul class="notes" id="notes-ideathon">
-                            <li><span class="dot"></span>Pitch bold, original ideas that solve real problems using technology</li>
-                            <li><span class="dot"></span>Teams present concept decks with market analysis and feasibility study</li>
-                            <li><span class="dot"></span>Judged on originality, clarity, scalability, and presentation quality</li>
-                        </ul>
-                        <div class="note-form">
-                            <input type="text" id="input-ideathon" placeholder="Add a note...">
-                            <button onclick="addNote('ideathon')">+ Add</button>
-                        </div>
-                        <div class="upload-area" onclick="document.getElementById('img-ideathon').click()">
-                            <p>📸 Click to upload event photos</p>
-                            <input type="file" id="img-ideathon" accept="image/*" multiple onchange="uploadImgs('ideathon',this)">
-                        </div>
-                        <div class="img-grid" id="imgs-ideathon"></div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-        <footer>© 2025 <span>NextGenAI</span> — Cintel's Innovation Club · Pentathon 2.0</footer>
-    </div>
-
-    <!-- IMAGE MODAL -->
     <div id="modal" onclick="closeModal()">
         <span class="modal-close">×</span>
         <img id="modal-img" src="" alt="">
@@ -298,6 +67,6 @@
 
     <script src="script.js"></script>
 </body>
-nextgenai
+past event Gallery
 
 </html>
