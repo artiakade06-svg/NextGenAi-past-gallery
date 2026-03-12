@@ -4,12 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Gallery — NextGenAI Pentathon 2.0</title>
+
     <link rel="stylesheet" href="style.css">
+
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Syne:wght@400;600;800&family=Space+Mono&display=swap" rel="stylesheet">
 </head>
 
 <body>
+
+    <!-- Background Effects -->
+    <div class="bgFx"></div>
+    <canvas id="stars"></canvas>
 
     <nav>
         <div class="logo">NEXT<span>GEN</span>AI</div>
@@ -17,17 +24,21 @@
     </nav>
 
     <div id="page-gallery">
+
         <div class="page-wrap">
+
             <div class="page-header">
                 <div class="badge">Event Posters</div>
                 <h1>Official Posters</h1>
                 <p>All promotional material from Pentathon 2.0 — March 2025</p>
             </div>
+
             <div class="poster-grid">
 
-                <div class="poster-card" onclick="openModal('pentathon-main.jpeg')">
-                    <img src="pentathon-events.jpeg" alt="Pentathon 2.0 Events Poster">
+                <div class="poster-card" onclick="openModal('pentathon-events.jpeg')">
+                    <img src="pentathon-events.jpeg">
                     <div class="hover-overlay"><span>View Full</span></div>
+
                     <div class="poster-info">
                         <div class="ptag">Main Poster</div>
                         <h3>Pentathon 2.0</h3>
@@ -36,37 +47,46 @@
                 </div>
 
                 <div class="poster-card" onclick="openModal('hackstreet.jpeg')">
-                    <img src="hackstreet.jpeg" alt="Hack Street 3.0">
+                    <img src="hackstreet.jpeg">
                     <div class="hover-overlay"><span>View Full</span></div>
+
                     <div class="poster-info">
                         <div class="ptag">Hack Street 3.0</div>
                         <h3>Hack Street 3.0</h3>
-                        <p>Pentathon 2.0's flagship hackathon — two days of intense problem-solving, 20–21 March.</p>
+                        <p>Pentathon 2.0's flagship hackathon — two days of intense problem-solving.</p>
                     </div>
                 </div>
 
                 <div class="poster-card" onclick="openModal('pentathon-main.jpeg')">
-                    <img src="pentathon-main.jpeg" alt="Pentathon Main Teaser">
+                    <img src="pentathon-main.jpeg">
                     <div class="hover-overlay"><span>View Full</span></div>
+
                     <div class="poster-info">
                         <div class="ptag">Teaser Poster</div>
                         <h3>Are You Ready?</h3>
-                        <p>Hype teaser showcasing all five events with Next Gen AI's signature style.</p>
+                        <p>Hype teaser showcasing all five events.</p>
                     </div>
                 </div>
 
             </div>
         </div>
-        <footer>© 2025 <span>NextGenAI</span> — Cintel's Innovation Club · Pentathon 2.0</footer>
+
+        <footer>
+            © 2025 <span>NextGenAI</span> — Cintel's Innovation Club · Pentathon 2.0
+        </footer>
+
     </div>
+
+    <!-- Image Modal -->
 
     <div id="modal" onclick="closeModal()">
         <span class="modal-close">×</span>
-        <img id="modal-img" src="" alt="">
+        <img id="modal-img">
     </div>
 
     <script src="script.js"></script>
+
 </body>
-past event Gallery
+past event gallery nextgenai
 
 </html>

@@ -6,6 +6,8 @@
     --lavender: #fc84e6;
     --light: #e9d5ff;
     --muted: #a05f9a;
+    /* Background gradient */
+    --bg-grad: linear-gradient(135deg, #1a0033, #0d001a);
 }
 
 * {
@@ -14,16 +16,32 @@
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
-    background: var(--bg);
+    background: var(--bg-grad);
     color: var(--light);
     font-family: 'Syne', sans-serif;
     overflow-x: hidden;
 }
+
+
+/* Background FX */
+
+.bgFx {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    background: radial-gradient(1200px 600px at 70% 18%, rgba(163, 32, 255, 0.22), transparent 60%), radial-gradient(900px 520px at 20% 75%, rgba(140, 43, 255, 0.20), transparent 60%);
+}
+
+#stars {
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+}
+
+
+/* NAV */
 
 nav {
     position: fixed;
@@ -32,20 +50,17 @@ nav {
     right: 0;
     z-index: 999;
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
     padding: 16px 40px;
     background: rgba(6, 0, 16, 0.88);
     backdrop-filter: blur(16px);
-    border-bottom: 1px solid rgba(168, 85, 247, 0.2);
 }
 
 .logo {
-    font-family: 'Orbitron', monospace;
+    font-family: 'Orbitron';
     font-weight: 900;
     font-size: 20px;
-    color: #fff;
-    letter-spacing: 2px;
 }
 
 .logo span {
@@ -53,43 +68,19 @@ nav {
 }
 
 .nav-title {
-    font-family: 'Space Mono', monospace;
+    font-family: 'Space Mono';
     font-size: 11px;
     letter-spacing: 3px;
     text-transform: uppercase;
     color: var(--muted);
 }
 
-.badge {
-    display: inline-block;
-    background: rgba(247, 85, 190, 0.12);
-    border: 1px solid rgba(247, 85, 228, 0.35);
-    color: var(--violet);
-    font-family: 'Space Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    padding: 6px 18px;
-    border-radius: 20px;
-    margin-bottom: 22px;
-}
 
-footer {
-    text-align: center;
-    padding: 36px 20px;
-    border-top: 1px solid rgba(247, 85, 169, 0.15);
-    font-size: 13px;
-    color: var(--muted);
-    letter-spacing: 1px;
-}
-
-footer span {
-    color: var(--violet);
-}
+/* PAGE */
 
 .page-wrap {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: auto;
     padding: 110px 40px 60px;
 }
 
@@ -99,21 +90,20 @@ footer span {
 }
 
 .page-header h1 {
-    font-family: 'Orbitron', monospace;
-    font-size: clamp(32px, 6vw, 56px);
-    font-weight: 900;
+    font-family: 'Orbitron';
+    font-size: 48px;
     background: linear-gradient(135deg, #fff, var(--lavender));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-clip: text;
 }
 
 .page-header p {
     color: var(--muted);
     margin-top: 10px;
-    font-size: 14px;
-    letter-spacing: 1px;
 }
+
+
+/* POSTERS */
 
 .poster-grid {
     display: grid;
@@ -126,22 +116,20 @@ footer span {
     border: 1px solid rgba(247, 85, 155, 0.2);
     border-radius: 20px;
     overflow: hidden;
-    position: relative;
     cursor: pointer;
-    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+    transition: 0.3s;
+    position: relative;
 }
 
 .poster-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 20px 55px rgba(255, 47, 154, 0.3);
-    border-color: rgba(247, 85, 180, 0.5);
 }
 
 .poster-card img {
     width: 100%;
     height: 380px;
     object-fit: cover;
-    display: block;
 }
 
 .hover-overlay {
@@ -152,7 +140,7 @@ footer span {
     align-items: center;
     justify-content: center;
     opacity: 0;
-    transition: opacity 0.3s;
+    transition: 0.3s;
 }
 
 .poster-card:hover .hover-overlay {
@@ -160,12 +148,9 @@ footer span {
 }
 
 .hover-overlay span {
-    font-family: 'Orbitron', monospace;
-    font-size: 12px;
+    font-family: 'Orbitron';
     letter-spacing: 3px;
-    text-transform: uppercase;
-    color: #fff;
-    border: 1px solid rgba(121, 46, 94, 0.5);
+    border: 1px solid white;
     padding: 10px 26px;
     border-radius: 30px;
 }
@@ -174,33 +159,43 @@ footer span {
     padding: 20px 24px;
 }
 
-.ptag {
-    display: inline-block;
-    font-size: 10px;
-    font-family: 'Space Mono', monospace;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    padding: 4px 12px;
-    border-radius: 20px;
-    background: rgba(255, 47, 186, 0.18);
-    border: 1px solid rgba(168, 85, 247, 0.35);
-    color: var(--violet);
-    margin-bottom: 10px;
-}
-
 .poster-info h3 {
-    font-family: 'Orbitron', monospace;
+    font-family: 'Orbitron';
     font-size: 15px;
-    font-weight: 700;
-    color: #fff;
-    margin-bottom: 6px;
 }
 
 .poster-info p {
     font-size: 13px;
     color: var(--muted);
-    line-height: 1.55;
 }
+
+.ptag {
+    font-size: 10px;
+    font-family: 'Space Mono';
+    background: rgba(255, 47, 186, 0.18);
+    padding: 4px 12px;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    padding: 36px 20px;
+    border-top: 1px solid rgba(247, 85, 169, 0.15);
+    font-size: 13px;
+    color: var(--muted);
+}
+
+footer span {
+    color: var(--violet);
+}
+
+
+/* MODAL */
 
 #modal {
     display: none;
@@ -210,8 +205,6 @@ footer span {
     z-index: 9999;
     align-items: center;
     justify-content: center;
-    backdrop-filter: blur(12px);
-    cursor: pointer;
 }
 
 #modal.active {
@@ -222,7 +215,6 @@ footer span {
     max-width: 88vw;
     max-height: 88vh;
     border-radius: 14px;
-    box-shadow: 0 0 80px rgba(255, 47, 127, 0.45);
 }
 
 .modal-close {
@@ -230,21 +222,5 @@ footer span {
     top: 22px;
     right: 34px;
     font-size: 44px;
-    color: rgba(255, 255, 255, 0.7);
     cursor: pointer;
-    line-height: 1;
-    transition: color 0.2s;
-}
-
-.modal-close:hover {
-    color: #fff;
-}
-
-@media (max-width: 768px) {
-    nav {
-        padding: 14px 20px;
-    }
-    .page-wrap {
-        padding: 100px 20px 50px;
-    }
 }
